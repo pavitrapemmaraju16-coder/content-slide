@@ -149,7 +149,6 @@ export default function HomePage() {
                             linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
         }
       `}</style>
-
       {/* --- HERO SECTION --- */}
       <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
         {/* Background Layer */}
@@ -228,7 +227,6 @@ export default function HomePage() {
           <div className="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent" />
         </motion.div>
       </section>
-
       {/* --- TICKER SECTION --- */}
       <div className="w-full bg-primary/5 border-y border-primary/10 py-4 overflow-hidden">
         <motion.div 
@@ -248,7 +246,6 @@ export default function HomePage() {
           ))}
         </motion.div>
       </div>
-
       {/* --- ABOUT SECTION (Split Layout) --- */}
       <section className="relative w-full py-32 px-6 overflow-hidden">
         <div className="max-w-[120rem] mx-auto grid lg:grid-cols-12 gap-16 lg:gap-24">
@@ -257,10 +254,10 @@ export default function HomePage() {
           <div className="lg:col-span-5 relative">
             <div className="sticky top-32">
               <SectionLabel>About InfAIra</SectionLabel>
-              <h2 className="font-heading text-4xl md:text-6xl lg:text-7xl leading-tight mb-8">
+              <h2 className="font-heading text-4xl md:text-6xl leading-tight mb-8 lg:text-3xl">
                 Bridging <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Expertise</span> with Intelligence
               </h2>
-              <p className="font-paragraph text-foreground/70 text-lg leading-relaxed mb-12">
+              <p className="font-paragraph text-foreground/70 mb-12 text-3xl">
                 InfAIra is a next-generation company that bridges consulting expertise with intelligent digital platforms to help organizations build and operate AI-ready, sustainable, and resilient infrastructure.
               </p>
               
@@ -292,10 +289,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* --- PRODUCTS SECTION (Horizontal Scroll / Sliding Screens) --- */}
       <ProductShowcase />
-
       {/* --- CTA SECTION --- */}
       <section className="relative w-full py-40 px-6 overflow-hidden flex items-center justify-center">
         {/* Background Effects */}

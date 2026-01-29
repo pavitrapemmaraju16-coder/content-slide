@@ -19,8 +19,10 @@ export default {
                 '9xl': ['8rem', { lineHeight: '1', letterSpacing: '0', fontWeight: '900' }],
             },
             fontFamily: {
-                heading: "syne",
-                paragraph: "azeret-mono"
+                heading: ["syne"],
+                paragraph: ["azeret-mono"],
+                roboto: ["roboto", "sans-serif"],
+                "eb-garamond": ["eb garamond", "serif"]
             },
             colors: {
                 destructive: '#FF0000',

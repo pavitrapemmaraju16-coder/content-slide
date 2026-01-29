@@ -33,7 +33,6 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-
       <main className="pt-24">
         {/* Hero Section */}
         <section className="w-full py-24 px-6">
@@ -47,7 +46,7 @@ export default function ContactPage() {
               <p className="font-paragraph text-sm uppercase tracking-wider text-primary mb-4">
                 GET IN TOUCH
               </p>
-              <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl text-foreground mb-8">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl text-foreground mb-8 font-roboto">
                 Let's Start a Conversation
               </h1>
               <p className="font-paragraph text-lg md:text-xl text-foreground/80 max-w-4xl mx-auto">
@@ -281,7 +280,6 @@ export default function ContactPage() {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
