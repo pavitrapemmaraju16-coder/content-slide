@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Image } from '@/components/ui/image';
 
 export default function PurposePage() {
   const steps = [
@@ -28,15 +27,7 @@ export default function PurposePage() {
 
       <main className="pt-24">
         {/* Hero Section */}
-        <section className="w-full min-h-[80vh] px-6 flex items-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-transparent z-10" />
-          <Image
-            src="https://wixmp-a85a29aaf55baa3e5171a82d.wixmp.com/77b92082-6d29-43ee-81db-75ad8bd0626e.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1cm46YXBwOjAyNWI2YzZhOWUxZTQ4NGY4NzBhMjk2ZWJiMzZmNDRiIiwib2JqIjpbW3sicGF0aCI6Ii83N2I5MjA4Mi02ZDI5LTQzZWUtODFkYi03NWFkOGJkMDYyNmUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiaXNzIjoidXJuOmFwcDowMjViNmM2YTllMWU0ODRmODcwYTI5NmViYjM2ZjQ0YiIsImlhdCI6MTc2OTY4ODA4NCwianRpIjoiNTBmNzdjZmMxM2M1IiwiZXhwIjoxNzY5Njk4ODk1fQ.0AqpR56SFpoGkKS1V_MvMe7HT8jfhtlzeZZyx81ZtaE&filename=Screenshot%202026-01-29%20171812.png"
-            alt="Purpose Background"
-            width={1920}
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-
+        <section className="w-full min-h-[80vh] px-6 flex items-center relative overflow-hidden bg-gradient-to-r from-background via-background/95 to-transparent">
           <div className="max-w-[120rem] mx-auto relative z-20 grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}

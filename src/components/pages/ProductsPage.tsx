@@ -3,8 +3,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Image } from '@/components/ui/image';
-import { Monitor, Globe, Layers, Wrench, Leaf, Settings } from 'lucide-react';
+import { Monitor, Globe, Layers, Wrench, Leaf, Settings, Cpu } from 'lucide-react';
 
 export default function ProductsPage() {
   const location = useLocation();
@@ -200,13 +199,13 @@ export default function ProductsPage() {
                     transition={{ delay: 0.3, duration: 0.8 }}
                     className="relative"
                   >
-                    <div className="rounded-2xl overflow-hidden border border-foreground/10 hover:border-primary transition-all duration-300">
-                      <Image
-                        src={product.image}
-                        alt={product.title}
-                        width={800}
-                        className="w-full h-auto"
-                      />
+                    <div className="rounded-2xl overflow-hidden border border-foreground/10 hover:border-primary transition-all duration-300 bg-gradient-to-br from-primary/10 to-secondary/10 p-12 flex items-center justify-center min-h-96">
+                      <div className="text-center">
+                        <div className="w-24 h-24 rounded-full border-2 border-primary/30 mx-auto mb-4 flex items-center justify-center">
+                          <Cpu className="w-12 h-12 text-primary/60" />
+                        </div>
+                        <p className="font-paragraph text-sm text-foreground/60">{product.tag}</p>
+                      </div>
                     </div>
                     {/* Decorative glow effect */}
                     <div className="absolute -inset-4 bg-primary/5 rounded-3xl blur-2xl -z-10" />

@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Image } from '@/components/ui/image';
-import { Home, Clock, Cloud, Activity } from 'lucide-react';
+import { Home, Clock, Cloud, Activity, Cpu } from 'lucide-react';
 
 export default function AboutPage() {
   return (
@@ -52,13 +51,14 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
+                className="w-full h-auto rounded-2xl border border-foreground/10 bg-gradient-to-br from-primary/10 to-secondary/10 p-12 flex items-center justify-center min-h-96"
               >
-                <Image
-                  src="https://wixmp-a85a29aaf55baa3e5171a82d.wixmp.com/ff6e07c4-f57c-458c-bfc1-6ff30082d523.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1cm46YXBwOjAyNWI2YzZhOWUxZTQ4NGY4NzBhMjk2ZWJiMzZmNDRiIiwib2JqIjpbW3sicGF0aCI6Ii9mZjZlMDdjNC1mNTdjLTQ1OGMtYmZjMS02ZmYzMDA4MmQ1MjMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiaXNzIjoidXJuOmFwcDowMjViNmM2YTllMWU0ODRmODcwYTI5NmViYjM2ZjQ0YiIsImlhdCI6MTc2OTY4ODA4NCwianRpIjoiYWI3Yjk1MDY4NDEyIiwiZXhwIjoxNzY5Njk4ODk1fQ.nc7JFOU6XBm5-wl0pl9KHC4EqzNSS4JQB_vL6AvOPfM&filename=Screenshot%202026-01-29%20171741.png"
-                  alt="InfAIra About"
-                  width={800}
-                  className="w-full h-auto rounded-2xl border border-foreground/10"
-                />
+                <div className="text-center">
+                  <div className="w-32 h-32 rounded-full border-2 border-primary/30 mx-auto mb-6 flex items-center justify-center">
+                    <Cpu className="w-16 h-16 text-primary/60" />
+                  </div>
+                  <p className="font-paragraph text-foreground/60">Digital Infrastructure</p>
+                </div>
               </motion.div>
             </div>
           </div>

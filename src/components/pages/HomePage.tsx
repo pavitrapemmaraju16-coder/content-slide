@@ -2,7 +2,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useSpring, useInView, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Image } from '@/components/ui/image';
 import { ArrowRight, Home, Clock, Cloud, Activity, ChevronRight, Globe, Cpu, Layers, Zap } from 'lucide-react';
 
 // --- ANIMATED PARTICLES COMPONENT ---
@@ -261,13 +260,14 @@ export default function HomePage() {
                 InfAIra is a next-generation company that bridges consulting expertise with intelligent digital platforms to help organizations build and operate AI-ready, sustainable, and resilient infrastructure.
               </p>
               
-              <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-2xl border border-white/10">
-                 <Image 
-                   src="https://static.wixstatic.com/media/2e8132_4a582c271aca42b5bfeda848f3e990e8~mv2.png"
-                   alt="Digital Network Visualization"
-                   className="w-full h-full object-cover"
-                 />
-                 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+              <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-32 h-32 rounded-full border border-primary/30 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full border border-primary/50 flex items-center justify-center">
+                      <Cpu className="w-10 h-10 text-primary/60" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
