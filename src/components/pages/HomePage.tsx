@@ -3,6 +3,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useSpring, useInView, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Home, Clock, Cloud, Activity, ChevronRight, Globe, Cpu, Layers, Zap } from 'lucide-react';
+import { Image } from '@/components/ui/image';
 
 // --- ANIMATED PARTICLES COMPONENT ---
 const AnimatedParticles = () => {
