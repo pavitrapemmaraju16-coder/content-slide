@@ -62,7 +62,7 @@ const PRODUCTS = [
     description: 'Strategy, AI-readiness, ESG, and smart infrastructure consulting. We develop roadmaps for investment strategies for operational and sustainability excellence.',
     link: '/products#advisory',
     tag: 'Consulting',
-    image: 'https://wixmp-a85a29aaf55baa3e5171a82d.wixmp.com/a6a50190-05b8-4d63-a383-19118624b1f0.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1cm46YXBwOjAyNWI2YzZhOWUxZTQ4NGY4NzBhMjk2ZWJiMzZmNDRiIiwib2JqIjpbW3sicGF0aCI6Ii9hNmE1MDE5MC0wNWI4LTRkNjMtYTM4My0xOTExODYyNGIxZjAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiaXNzIjoidXJuOmFwcDowMjViNmM2YTllMWU0ODRmODcwYTI5NmViYjM2ZjQ0YiIsImlhdCI6MTc2OTY4ODA4NCwianRpIjoiNzQ3YjllMDYyYTcxIiwiZXhwIjoxNzY5Njk4ODk1fQ.3VgdMr6GdHIPjTm-zxqUhDVLBLEAz8oFXzwN0M5BMLo&filename=Screenshot%202026-01-29%20171726.png'
+    image: 'https://static.wixstatic.com/media/2e8132_2f41a53af69c43cd96c827c1b02faf13~mv2.png?originWidth=1152&originHeight=896'
   },
   {
     id: 'cvs',
@@ -71,7 +71,7 @@ const PRODUCTS = [
     description: 'Computer Vision platform using AI and deep learning to interpret camera feeds. Enables real-time detection, analytics, and insights for safety, security, and operational intelligence.',
     link: '/products#cvs',
     tag: 'Computer Vision',
-    image: 'https://wixmp-a85a29aaf55baa3e5171a82d.wixmp.com/ff6e07c4-f57c-458c-bfc1-6ff30082d523.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1cm46YXBwOjAyNWI2YzZhOWUxZTQ4NGY4NzBhMjk2ZWJiMzZmNDRiIiwib2JqIjpbW3sicGF0aCI6Ii9mZjZlMDdjNC1mNTdjLTQ1OGMtYmZjMS02ZmYzMDA4MmQ1MjMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiaXNzIjoidXJuOmFwcDowMjViNmM2YTllMWU0ODRmODcwYTI5NmViYjM2ZjQ0YiIsImlhdCI6MTc2OTY4ODA4NCwianRpIjoiYWI3Yjk1MDY4NDEyIiwiZXhwIjoxNzY5Njk4ODk1fQ.nc7JFOU6XBm5-wl0pl9KHC4EqzNSS4JQB_vL6AvOPfM&filename=Screenshot%202026-01-29%20171741.png'
+    image: 'https://static.wixstatic.com/media/2e8132_85df9a2d71e44dfd96e8401d21b4189e~mv2.png?originWidth=1152&originHeight=896'
   },
   {
     id: 'twin',
@@ -80,7 +80,7 @@ const PRODUCTS = [
     description: 'Digital Twin platform connecting 3D models, BIM, IoT, and AI. Enables real-time monitoring, operations analytics, and predictive maintenance for cities, buildings, and facilities.',
     link: '/products#twin',
     tag: 'Digital Twin',
-    image: 'https://wixmp-a85a29aaf55baa3e5171a82d.wixmp.com/77b92082-6d29-43ee-81db-75ad8bd0626e.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1cm46YXBwOjAyNWI2YzZhOWUxZTQ4NGY4NzBhMjk2ZWJiMzZmNDRiIiwib2JqIjpbW3sicGF0aCI6Ii83N2I5MjA4Mi02ZDI5LTQzZWUtODFkYi03NWFkOGJkMDYyNmUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXSwiaXNzIjoidXJuOmFwcDowMjViNmM2YTllMWU0ODRmODcwYTI5NmViYjM2ZjQ0YiIsImlhdCI6MTc2OTY4ODA4NCwianRpIjoiNTBmNzdjZmMxM2M1IiwiZXhwIjoxNzY5Njk4ODk1fQ.0AqpR56SFpoGkKS1V_MvMe7HT8jfhtlzeZZyx81ZtaE&filename=Screenshot%202026-01-29%20171812.png'
+    image: 'https://static.wixstatic.com/media/2e8132_1e229b4a4a5244beba4539354401cc7c~mv2.png?originWidth=1152&originHeight=896'
   }
 ];
 
@@ -367,31 +367,21 @@ function ProductShowcase() {
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         
         {/* Section Header (Absolute positioned to stay visible initially) */}
-        <div className="absolute top-12 left-6 md:left-12 z-20 pointer-events-none mix-blend-difference">
+        <div className="absolute top-12 left-6 md:left-12 z-20 pointer-events-none">
           <SectionLabel>Product & Service Lines</SectionLabel>
-          <h2 className="font-heading text-4xl md:text-5xl text-white">Comprehensive Solutions</h2>
+          <h2 className="font-heading text-4xl md:text-5xl text-foreground">Comprehensive Solutions</h2>
         </div>
 
         <motion.div style={{ x }} className="flex gap-0 h-full w-[300vw]">
           {PRODUCTS.map((product, i) => (
-            <div key={product.id} className="w-screen h-full flex items-center justify-center p-6 md:p-24 relative border-r border-white/5">
-              {/* Background Image with Overlay */}
-              <div className="absolute inset-0 z-0">
-                <Image 
-                  src={product.image} 
-                  alt={product.title}
-                  className="w-full h-full object-cover opacity-20 grayscale hover:grayscale-0 transition-all duration-1000"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
-              </div>
-
+            <div key={product.id} className="w-screen h-full flex items-center justify-center p-6 md:p-24 relative border-r border-white/5 bg-background">
               {/* Content Card */}
               <div className="relative z-10 w-full max-w-[100rem] grid lg:grid-cols-2 gap-12 items-center">
                 <div className="order-2 lg:order-1">
                   <div className="inline-block px-4 py-2 border border-primary/30 rounded-full text-primary font-paragraph text-xs mb-6 bg-primary/5 backdrop-blur-md">
                     {product.tag}
                   </div>
-                  <h3 className="font-heading text-5xl md:text-7xl lg:text-8xl mb-4 text-white">
+                  <h3 className="font-heading text-5xl md:text-7xl lg:text-8xl mb-4 text-foreground">
                     {product.title}
                   </h3>
                   <p className="font-heading text-xl md:text-2xl text-primary/80 italic mb-8">
@@ -401,7 +391,7 @@ function ProductShowcase() {
                     {product.description}
                   </p>
                   <Link to={product.link}>
-                    <button className="bg-white/10 hover:bg-primary hover:text-primary-foreground text-white border border-white/20 font-heading text-lg px-8 py-4 rounded-lg backdrop-blur-md transition-all duration-300">
+                    <button className="bg-primary hover:bg-primary/80 text-primary-foreground border border-primary/30 font-heading text-lg px-8 py-4 rounded-lg backdrop-blur-md transition-all duration-300">
                       Explore Solution
                     </button>
                   </Link>
@@ -409,19 +399,19 @@ function ProductShowcase() {
                 
                 {/* Visual Element */}
                 <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-                   <div className="relative w-full max-w-lg aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-primary/10 group">
+                   <div className="relative w-full max-w-lg aspect-[4/3] rounded-2xl overflow-hidden border border-primary/30 shadow-2xl shadow-primary/20 group">
                       <Image 
                         src={product.image}
                         alt={product.title}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
+                      <div className="absolute inset-0 bg-primary/5 mix-blend-overlay" />
                    </div>
                 </div>
               </div>
               
               {/* Number Indicator */}
-              <div className="absolute bottom-12 right-12 font-heading text-9xl text-white/5 select-none">
+              <div className="absolute bottom-12 right-12 font-heading text-9xl text-foreground/5 select-none">
                 0{i + 1}
               </div>
             </div>
