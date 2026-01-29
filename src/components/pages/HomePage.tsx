@@ -5,6 +5,45 @@ import { Link } from 'react-router-dom';
 import { Image } from '@/components/ui/image';
 import { ArrowRight, Home, Clock, Cloud, Activity, ChevronRight, Globe, Cpu, Layers, Zap } from 'lucide-react';
 
+// --- ANIMATED PARTICLES COMPONENT ---
+const AnimatedParticles = () => {
+  const particles = Array.from({ length: 50 }, (_, i) => ({
+    id: i,
+    x: Math.random() * 100,
+    y: Math.random() * 100,
+    size: Math.random() * 3 + 1,
+    duration: Math.random() * 20 + 15,
+    delay: Math.random() * 5,
+  }));
+
+  return (
+    <div className="fixed inset-0 pointer-events-none overflow-hidden">
+      {particles.map((particle) => (
+        <motion.div
+          key={particle.id}
+          className="absolute rounded-full bg-primary/30"
+          style={{
+            width: particle.size,
+            height: particle.size,
+            left: `${particle.x}%`,
+            top: `${particle.y}%`,
+          }}
+          animate={{
+            y: [0, -window.innerHeight],
+            opacity: [0, 1, 0],
+          }}
+          transition={{
+            duration: particle.duration,
+            delay: particle.delay,
+            repeat: Infinity,
+            ease: 'linear',
+          }}
+        />
+      ))}
+    </div>
+  );
+};
+
 // --- CANONICAL DATA SOURCES ---
 // Preserving original data structures exactly as defined in the source.
 
@@ -84,6 +123,7 @@ export default function HomePage() {
 
   return (
     <div ref={containerRef} className="min-h-screen bg-background text-foreground overflow-x-clip selection:bg-primary/30 selection:text-primary-foreground">
+      <AnimatedParticles />
       <style>{`
         .clip-tech-corner {
           clip-path: polygon(
@@ -105,8 +145,8 @@ export default function HomePage() {
         }
         .grid-bg {
           background-size: 40px 40px;
-          background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                            linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+          background-image: linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+                            linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
         }
       `}</style>
 
@@ -114,13 +154,8 @@ export default function HomePage() {
       <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
         {/* Background Layer */}
         <div className="absolute inset-0 z-0">
-          <Image
-            src="https://static.wixstatic.com/media/2e8132_7a1182ba05ec4b85b65b812c755fd33b~mv2.png"
-            alt="Abstract Quantum Background"
-            className="w-full h-full object-cover opacity-40"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/60 to-background" />
-          <div className="absolute inset-0 grid-bg opacity-30" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/40 to-background" />
+          <div className="absolute inset-0 grid-bg opacity-20" />
         </div>
 
         {/* Floating HUD Elements */}
@@ -145,7 +180,7 @@ export default function HomePage() {
             className="mb-8 relative"
           >
             <div className="absolute -inset-10 bg-primary/10 blur-3xl rounded-full" />
-            <h1 className="font-heading text-7xl md:text-9xl lg:text-[10rem] leading-[0.9] tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-white/50">
+            <h1 className="font-heading text-7xl md:text-9xl lg:text-[10rem] leading-[0.9] tracking-tighter text-foreground">
               Inf<span className="text-primary">AIra</span>
             </h1>
           </motion.div>

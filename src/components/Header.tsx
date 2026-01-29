@@ -26,7 +26,7 @@ export default function Header() {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
-              <span className="font-heading text-2xl md:text-3xl">
+              <span className="font-heading text-2xl md:text-3xl font-bold">
                 <span className="text-foreground">Inf</span>
                 <span className="text-primary">AIra</span>
               </span>
