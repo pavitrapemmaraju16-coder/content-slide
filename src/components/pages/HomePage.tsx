@@ -178,7 +178,7 @@ export default function HomePage() {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="mb-8 relative"
           >
-            <div className="absolute -inset-10 bg-primary/10 blur-3xl rounded-full" />
+            <div className="absolute -inset-10 bg-primary/10 blur-3xl rounded-full text-9xl font-prompt" />
             <h1 className="font-heading text-7xl md:text-9xl lg:text-[10rem] leading-[0.9] tracking-tighter text-foreground">
               Inf<span className="text-primary">AIra</span>
             </h1>
@@ -254,22 +254,13 @@ export default function HomePage() {
           <div className="lg:col-span-5 relative">
             <div className="sticky top-32">
               <SectionLabel>About InfAIra</SectionLabel>
-              <h2 className="font-heading text-4xl md:text-6xl leading-tight mb-8 lg:text-3xl">
+              <h2 className="text-4xl md:text-6xl leading-tight mb-8 lg:text-3xl font-roboto">
                 Bridging <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Expertise</span> with Intelligence
               </h2>
               <p className="font-paragraph text-foreground/70 mb-12 text-3xl">
                 InfAIra is a next-generation company that bridges consulting expertise with intelligent digital platforms to help organizations build and operate AI-ready, sustainable, and resilient infrastructure.
               </p>
-              
-              <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-32 h-32 rounded-full border border-primary/30 flex items-center justify-center">
-                    <div className="w-20 h-20 rounded-full border border-primary/50 flex items-center justify-center">
-                      <Cpu className="w-10 h-10 text-primary/60" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+
             </div>
           </div>
 
@@ -400,12 +391,12 @@ function ProductShowcase() {
                 {/* Visual Element */}
                 <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
                    <div className="relative w-full max-w-lg aspect-[4/3] rounded-2xl overflow-hidden border border-primary/30 shadow-2xl shadow-primary/20 group">
-                      <Image 
-                        src={product.image}
-                        alt={product.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-primary/5 mix-blend-overlay" />
+                     <Image 
+                       src={product.image}
+                       alt={product.title}
+                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                     />
+
                    </div>
                 </div>
               </div>

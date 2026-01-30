@@ -22,7 +22,8 @@ export default {
                 heading: ["syne"],
                 paragraph: ["azeret-mono"],
                 roboto: ["roboto", "sans-serif"],
-                "eb-garamond": ["eb garamond", "serif"]
+                "eb-garamond": ["eb garamond", "serif"],
+                prompt: ["prompt", "sans-serif"]
             },
             colors: {
                 destructive: '#FF0000',
