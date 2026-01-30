@@ -122,9 +122,7 @@ export default function HomePage() {
   const heroOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
 
   return (
-    <div ref={containerRef} className="min-h-screen text-white overflow-x-clip selection:bg-white/30 selection:text-white" style={{
-      background: 'linear-gradient(to right, #077aab, #016da3, #0681ad, #1197b9, #16a3ae, #17a69e, #0c7996, #0a517e)'
-    }}>
+    <div ref={containerRef} className="min-h-screen text-white overflow-x-clip selection:bg-white/30 selection:text-white bg-gradient-1">
       <AnimatedParticles />
       <style>{`
         .clip-tech-corner {
@@ -204,14 +202,14 @@ export default function HomePage() {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
               <Link to="/about" className="group relative">
-                <div className="absolute inset-0 bg-white/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <button className="relative clip-tech-corner bg-white text-gradient-1 font-heading text-lg px-10 py-4 transition-all duration-300 hover:translate-y-[-2px] active:translate-y-[1px]">
+                <div className="absolute inset-0 bg-gradient-to-r from-gradient-1 via-gradient-3 to-gradient-5 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <button className="relative clip-tech-corner bg-white text-transparent bg-clip-text bg-gradient-to-r from-gradient-1 via-gradient-3 to-gradient-5 font-heading text-lg px-10 py-4 transition-all duration-300 hover:translate-y-[-2px] active:translate-y-[1px]">
                   Get Started
                 </button>
               </Link>
               <Link to="/products">
-                <button className="group flex items-center gap-2 font-heading text-lg text-white hover:text-white/80 transition-colors px-8 py-4">
-                  <span className="border-b border-transparent group-hover:border-white transition-all">Learn More</span>
+                <button className="group flex items-center gap-2 font-heading text-lg text-transparent bg-clip-text bg-gradient-to-r from-gradient-1 via-gradient-3 to-gradient-5 hover:opacity-80 transition-opacity px-8 py-4">
+                  <span className="border-b border-transparent group-hover:border-current transition-all">Learn More</span>
                   <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
@@ -306,10 +304,10 @@ export default function HomePage() {
             </p>
             
             <Link to="/contact">
-              <button className="group relative inline-flex items-center gap-4 bg-white text-gradient-1 font-heading text-xl px-12 py-6 clip-tech-corner transition-transform duration-300 hover:scale-105">
+              <button className="group relative inline-flex items-center gap-4 bg-white text-transparent bg-clip-text bg-gradient-to-r from-gradient-1 via-gradient-3 to-gradient-5 font-heading text-xl px-12 py-6 clip-tech-corner transition-transform duration-300 hover:scale-105">
                 <span>Contact Us</span>
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 border-2 border-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 clip-tech-corner translate-x-1 translate-y-1 -z-10" />
+                <div className="absolute inset-0 border-2 border-gradient-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 clip-tech-corner translate-x-1 translate-y-1 -z-10" />
               </button>
             </Link>
           </motion.div>
@@ -356,9 +354,7 @@ function ProductShowcase() {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-66.66%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh]" style={{
-      background: 'linear-gradient(to right, #077aab, #016da3, #0681ad, #1197b9, #16a3ae, #17a69e, #0c7996, #0a517e)'
-    }}>
+    <section ref={targetRef} className="relative h-[300vh] bg-gradient-1">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         
         {/* Section Header (Absolute positioned to stay visible initially) */}
@@ -386,7 +382,7 @@ function ProductShowcase() {
                     {product.description}
                   </p>
                   <Link to={product.link}>
-                    <button className="bg-white hover:bg-white/80 text-gradient-1 border border-white/30 font-heading text-lg px-8 py-4 rounded-lg backdrop-blur-md transition-all duration-300">
+                    <button className="bg-white hover:bg-white/80 text-transparent bg-clip-text bg-gradient-to-r from-gradient-1 via-gradient-3 to-gradient-5 border border-white/30 font-heading text-lg px-8 py-4 rounded-lg backdrop-blur-md transition-all duration-300">
                       Explore Solution
                     </button>
                   </Link>
